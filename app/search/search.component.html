@@ -1,0 +1,134 @@
+
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-grievance">MEDI Shop</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a (click)="view()"><span class ="las la-igloo"></span>
+                        <span>My Orders</span></a>
+                </li>
+                <li>
+                    <a (click)="home()"><span class ="las la-igloo"></span>
+                        <span>Search</span></a>
+                </li>
+                 <li>
+                    <a (click)="logout()"><span class ="las la-user-circle"></span>
+                        <span>Logout</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="">
+                    <span class="las la-bars"></span>
+                </label>
+                Products
+            </h2>
+            <!--<div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search here"/>
+            </div>-->
+            <div class="user-wrapper">
+                <!--Search Bar div-->
+                <div id="search-bar-utility">
+                 <div id="search-bar">
+                <form>
+                   
+                    
+                    <!--Search Icon-->
+                    <i class="fas fa-search"></i>
+                </form>
+                </div>
+                </div>
+            <!--Search Bar div end-->
+                <img src="./assets/img/images.png" width="30px" height="30px" alt="">
+                <div>
+                    
+                    <small>{{email}}</small>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="card-body">
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Product Name:</td>
+                            <td>{{name}}</td>
+                                                  
+                            
+                        </tr>
+                        <tr>
+                            <td>Quantity:</td>
+                            <td>{{quantity}}</td>
+                        </tr>
+                        <tr>
+                            <td>Cost:</td>
+                            <td>{{cost}}</td>
+                        </tr> <tr>
+                            <td>Manufactured Date:</td>
+                            <td>{{man_date}}</td>
+                        </tr> <tr>
+                            <td>Expire Date:</td>
+                            <td>{{exp_date}}</td>
+                        </tr>
+                        <tr>
+                            <button  id="order" (click)="order()" *ngIf="available" >Order</button>
+                        </tr>
+                    </thead>
+                    
+                </table>
+                
+            </div>
+                
+           <!--- <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users">
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Complaints</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list">
+                            
+                        </span>
+                    </div>
+                </div>-->
+
+               <!--- <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Complaints</span>
+                    </div>
+                    <div>
+                        <span class="las la-shipping-bag">
+                            
+                        </span>
+                    </div>
+                </div>-->
+            
+        
+                
+            
+        </main>
+    </div>
+</body>
+

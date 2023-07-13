@@ -1,0 +1,40 @@
+
+
+<body>
+    
+    <div>
+        <div><h1>STOCK DETAILS:</h1></div>
+            
+        
+        <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Sold</th>
+                <th>Amount</th>
+                <th>Manuf_date</th>
+                <th>Expire Date</th>
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of StockData; let i = index;" >
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.sold}}</td>
+                <td>{{product.amount}}</td>
+                <td>{{product.man_date}}</td>
+                <td>{{product.exp_date}}</td>
+                
+                
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <br><br>
+    <br>
+    </body>

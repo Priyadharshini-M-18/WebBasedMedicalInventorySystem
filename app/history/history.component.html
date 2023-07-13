@@ -1,0 +1,195 @@
+<p>history works!</p>
+
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2><span class="lab la-grievance">MEDI Shop</span></h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a [routerLink]="['/profile']"><span class ="las la-igloo"></span>
+                        <span>view Stock</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/adm']"><span class ="las la-igloo"></span>
+                        <span>Customers</span></a>
+                </li>
+            
+                <li>
+                    <a [routerLink]="['/upload']"><span class ="las la-clipboard-list"></span>
+                        <span>Add Stock</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/remove']"><span class ="las la-clipboard-list"></span>
+                        <span>Remove Stock</span></a>
+                </li>
+                <li>
+                    <a [routerLink]="['/update']"><span class ="las la-clipboard-list"></span>
+                        <span>Update Stock</span></a>
+                </li>
+                <li>
+
+                <li>
+                    <a (click)="logout()"><span class ="las la-user-circle"></span>
+                        <span>Logout</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="">
+                    <span class="las la-bars"></span>
+                </label>
+                Dashboard
+            </h2>
+            <!--<div class="search-wrapper">
+                <span class="las la-search"></span>
+                <input type="search" placeholder="Search here"/>
+            </div>-->
+            <div class="user-wrapper">
+                <img src="./assets/img/admin-image.jpg" width="30px" height="30px" alt="">
+                <div>
+                    <h4>Administrator</h4>
+                    <small>Super admin</small>
+                </div>
+            </div>
+        </header>
+        <main>
+           <!--- <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users">
+
+                        </span>
+                    </div>
+                </div>
+
+                <div class="card-single">
+                    <div>
+                        <h1>79</h1>
+                        <span>Complaints</span>
+                    </div>
+                    <div>
+                        <span class="las la-clipboard-list">
+                            
+                        </span>
+                    </div>
+                </div>-->
+
+               <!--- <div class="card-single">
+                    <div>
+                        <h1>54</h1>
+                        <span>Complaints</span>
+                    </div>
+                    <div>
+                        <span class="las la-shipping-bag">
+                            
+                        </span>
+                    </div>
+                </div>-->
+            
+        
+                <div class="customers">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Purchase History</h3>
+                            
+                        </div>
+                        <div class="card-body">
+                            <p>{{name}}</p>
+                            <p>{{email}}</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Quantity</th>
+                                        <th>Cost</th>
+                                        <th>Date of Order</th>
+                                    
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let product of Orders; let i = index;" >
+                                    
+                                        <td>{{product.order_prd_name}}</td>
+                                        <td>{{product.order_prd_qnty}}</td>
+                                        <td>{{product.order_cost}}</td>
+                                        <th>{{product.date}}</th>
+                                        
+                                        <!--<td>{{product.c_subject}}</td>
+                                        <td>{{product.c_dept}}</td>-->
+                                        <!--<td>{{product.c_content}}</td>-->
+                                        <!--<td>{{product.c_status}}</td>-->
+                                        <!--<td>
+                                            <input type="number" placeholder="Quantity" [ngModel]="qnty" [ngModelOptions]="{standalone: true}" name="qnty"  required>
+                                            <button  class="btn btn-danger" (click)="order(product.id,product.amount)">Order</button>
+                                            <span ><button type="submit" [routerLink]="['/adminsolve']">Resolve problem</button></span>
+                                        </td>-->
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                             <div class="customer">
+
+                             </div>
+
+                            <!--<div class="customer">
+                                <div>
+                                    <img src="./assets/img/user_icon.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Geetha</h4>
+                                        <small>Customer 1</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div>
+                                    <img src="./assets/img/user_icon.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Pooja</h4>
+                                        <small>Customer 2</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>
+
+                            <div class="customer">
+                                <div>
+                                    <img src="./assets/img/user_icon.png" width="40px" height="40px" alt="">
+                                    <div>
+                                        <h4>Eva</h4>
+                                        <small>Customer 3</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="las la-user-circle"></span>
+                                    <span class="las la-comment"></span>
+                                    <span class="las la-phone"></span>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            
+        </main>
+    </div>
+</body>

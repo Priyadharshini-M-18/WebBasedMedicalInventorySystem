@@ -1,0 +1,46 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#070130;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    
+  }
+  
+  table {
+    margin-top:30px;
+    width:900px;
+    height:100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  th,
+  h1{
+    color:white;
+  }
+  h6{
+    color:white;
+    margin-left:700px;
+  }
+  td {
+    padding: 10px 15px;
+  }
+  thead {
+    height:100px;
+    background: #395870;
+    
+    color: #fff;
+  }
+  
+  td {
+    color:white;
+    border-bottom: 1px solid #cecfd5;
+    border-right: 1px solid #cecfd5;
+  }
+  td:first-child {
+    border-left: 1px solid #cecfd5;
+  }
+  

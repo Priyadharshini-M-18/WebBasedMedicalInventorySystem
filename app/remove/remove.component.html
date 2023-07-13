@@ -1,0 +1,15 @@
+
+<body>
+    <form>
+      <h1>Remove Stock</h1>
+      <div class="input-field">
+        <input type="text" placeholder="Product Id" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" name="id"  required>
+      </div>
+      <div class="input-field">
+        <input type="text" placeholder="Product Name" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" name="name" required>
+        
+      </div>
+      <button type="submit"  class="btn" (click)="remove()">Remove</button>
+    </form>
+    
+  </body>

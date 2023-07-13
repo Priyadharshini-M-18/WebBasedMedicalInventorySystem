@@ -1,0 +1,139 @@
+/*Basic color variables*/
+:root{
+	--bg_color_1 : #070130;
+	--bg_color_2: #0d0065;
+	--bg_color_3: #222b5c;
+	--bg_music_bar: #2b2b2a;
+	--font_color_1: white;
+	--font_color_2: lightgrey;
+	--font_color_3 : #1DB954;
+}
+/*End of variables section*/
+
+/*Basic sections of the html page*/
+body{
+	height: 100%;
+	width: 100%;
+	margin-left: -5px;
+	margin-top: -1vh;
+	background-color:#070130 ;
+}
+
+#order{
+    background-color: #5ec6db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    margin-left:1200px;
+  }
+nav{
+	height: 4rem;
+	width:100%;
+	margin: 0.3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: fixed;
+	z-index: 1; /*Navigation bar should be always at top z-index ensures that*/
+	background-color: var(--bg_color_1);
+}
+
+main{
+	height: 150%;
+	width:85%;
+	margin-top: 10vh;
+	margin-left: 4%;
+	margin-right: 3%;
+	padding-bottom: 20vh;
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+aside{
+	height:auto;
+	width:28%;
+	display: inline-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 0px;
+	margin-top: 8%;
+	margin-left: -1vw;
+	vertical-align: top; /*Ensures that aside is displayed right beside main at the top*/
+}
+/*End of basic sections*/
+
+/* Basic Classes*/
+.hide{
+	display: none; /*This class hides any div that it is applie to*/
+}
+/*End of classes*/
+
+/*Navigation Bar*/
+/*Music Player Logo and Name part*/
+#music-player-tag{
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+#music-player-tag{
+	width: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+#music-player-logo{
+	display: inline;
+}
+#music-player-logo img{
+	height: 3.3rem;
+	width: 3.3rem;
+	border-radius: 50%;
+	display: inline;
+}
+#music-player-name{
+	color: white;
+	font-family: helvetica, sans-serif;
+	padding: 5px;
+	margin-top: 7px;
+	display: inline;
+}
+#user{
+	margin-top: 5px;
+    margin-right:30px;
+}
+#user img{
+	height: 3.3rem;
+	width: 3.3rem;
+	border-radius: 50%;
+}
+
+#main-header h1{
+	color: var(--font_color_1);
+	font-family: helvetica, sans-serif;
+}
+/* Home Screen Carousel*/
+#new-releases{
+	overflow: hidden;
+	white-space: nowrap;
+}
+#new-releases img{
+	height:35vh;
+	width:35vh;
+	text-align: center;
+	margin-top: 50px;
+	padding: 4%;
+	transition: transform 0.7s ease-in-out;
+
+}
+#new-releases img:hover{
+	transform: scale(1.1);
+	transition: transform 0.4s ease-in-out; /*Animation on hover*/
+}

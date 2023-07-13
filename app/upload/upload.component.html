@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Medical Inventory</title>
+    
+  </head>
+  <body>
+    <div class="signup-container">
+      <h1>New Stock</h1>
+      <form>
+        <div class="form-group">
+          <label for="username">Product Name:</label>
+          <input type="text" id="username" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="id">Product ID:</label>
+          <input type="text" id="id" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" name="id" required>
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}" name="quantity" required>
+        </div>
+        <div class="form-group">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount"[(ngModel)]="amount" [ngModelOptions]="{standalone: true}" name="amount" required>
+        </div>
+        <div class="form-group">
+            <label for="man_date">Manufactured Date:</label>
+            <input type="text" id="man_date" [(ngModel)]="man_date" [ngModelOptions]="{standalone: true}"name="man_date" required>
+          </div>
+          <div class="form-group">
+            <label for="exp_date">Expire Date:</label>
+            <input type="text" id="exp_date"[(ngModel)]="exp_date" [ngModelOptions]="{standalone: true}" name="exp_date" required>
+          </div>
+        <button type="submit" (click)="save()">Upload</button>
+      </form>
+      
+      
+    </div>
+  </body>
+</html>
+

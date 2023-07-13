@@ -1,0 +1,31 @@
+<h1>Update Stock</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Manufactured_Date</th>
+            <th>Expired_date</th>
+            <th>New Values</th>
+            
+    
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <input type="text" placeholder="id" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" name="id"  required>
+            <button  class="btn btn-danger" type="submit" (click)="get()">Get</button>
+            <td>{{product.name}}</td>
+            <td>{{product.man_date}}</td>
+            <td>{{product.exp_date}}</td>
+            <td>
+                <input type="number" placeholder="Quantity" [(ngModel)]="quantity" [ngModelOptions]="{standalone: true}" name="quantity"  required>
+                
+                <button  type="submit" class="btn btn-danger" (click)="update()">Update</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+<br><br>
+<br>
